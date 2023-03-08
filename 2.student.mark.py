@@ -26,6 +26,10 @@ class Score:
 def display_scores(scores):
     for score in scores:
         print(f"{score.student.name}'s score for {score.subject.name}: {score.score}")
+        print(f"ID: {score.student.id}")
+        print(f"DOB: {score.student.dob}")
+        print(f"Subjects: {', '.join([subj.name for subj in score.student.subjects])}")
+
 
 # Get input
 n_students = int(input("Number of students: "))
